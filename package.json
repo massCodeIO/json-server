@@ -1,5 +1,5 @@
 {
-  "name": "json-server",
+  "name": "@masscode/json-server",
   "version": "0.17.0",
   "description": "Get a full fake REST API with zero coding in less than 30 seconds",
   "main": "./lib/server/index.js",
@@ -17,10 +17,11 @@
     "build": "babel src -d lib",
     "toc": "markdown-toc -i README.md",
     "postversion": "git push && git push --tags",
-    "prepublish": "npm test && npm run build"
+    "release": "bumpp -c 'build: release v' -t"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bumpp": "^7.1.1",
     "chalk": "^4.1.2",
     "compression": "^1.7.4",
     "connect-pause": "^0.1.1",
